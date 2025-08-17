@@ -1,5 +1,9 @@
 # Brady Weber's ePortfolio for Full Stack Grocery Item Tracker
 
+[Orignal Project](https://github.com/Bweber0007/Bweber0007.github.io/tree/main/Original_Files)
+
+[Updated Project](https://github.com/Bweber0007/Bweber0007.github.io/tree/main/Updated_Files)
+
 ### Professional Self-Assessment
 
 The coursework that I have completed during my time in this Computer Science program has provided me with a breadth of knowledge across multiple different facets of the Computer Science field. These courses have provided me with experiences in front-end, back-end, and full stack systems, as well as mobile application development, embedded systems development, machine learning and AI development, and exposed me to industry standard frameworks and practices such as developing with a security mindset, Agile development, reverse engineering, test-driven development, and utilizing a MEAN stack.
@@ -8,10 +12,6 @@ In courses such as Software Development Lifecycle and System Analysis and Design
  
 In this Capstone course specifically, I was able to funnel many of these different concepts that I learned throughout my time in the Computer Science program into a single project. For the basis of this project, I chose a single, simple, MVP-style artifact to improve upon. I wanted to start with a basic project that would allow me to showcase my software engineering mindset of taking a minimum product and growing it into a deliverable solution while using industry-standard design principles and techniques. The original project, developed with C++, was designed to take a local file of a list of items and compile the data into an output file with a list of each item and its frequency from the original file. This was a simple I/O project that performed simple calculations on the data. In order to improve upon this project, I implemented a full-stack Python application that would read the data in from the same original file, store the data in an SQLite database, display that data in a simple and intuitive HTML front-end interface, and connect it all together using routes with Flask. The front-end interface allows for new items to be added to the list, manipulation of original item frequencies, and sorting the data by name or frequency via a selection sort algorithm. This data is then saved to the SQLite database in real time with each addition or manipulation. While there is no user access control implemented in the program, I still kept security in mind during development by implementing prepared statements on all SQL queries.
 
-
-[Orignal Project](https://github.com/Bweber0007/Bweber0007.github.io/tree/main/Original_Files)
-
-[Updated Project](https://github.com/Bweber0007/Bweber0007.github.io/tree/main/Updated_Files)
 
 ### Databases Narrative
 

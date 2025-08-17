@@ -1,5 +1,7 @@
 # Brady Weber's ePortfolio for Full Stack Grocery Item Tracker
 
+[Original Project Code Review and Planned Enhancements Video](https://youtu.be/x78YoXtT7IE)
+
 [Orignal Project](https://github.com/Bweber0007/Bweber0007.github.io/tree/main/Original_Files)
 
 [Updated Project](https://github.com/Bweber0007/Bweber0007.github.io/tree/main/Updated_Files)

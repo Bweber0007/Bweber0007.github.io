@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grocery Frequencies</title>
+    <style>
+        table { border-collapse: collapse; width: 50%; }
+        th, td { border: 1px solid black; padding: 8px; text-align: left; }
+        button { margin: 0 2px; }
+    </style>
+</head>
+<body>
+    <h1>Grocery Items Frequency</h1>
+
+    <!-- Form to add a new item -->
+    <form action="/add" method="post">
+        <input type="text" name="new_item" placeholder="New Item">
+        <button type="submit">Add Item</button>
+    </form>
+
+    <!-- Sorting buttons -->
+    <form action="/sort_frequency" method="get" style="display:inline;">
+        <button type="submit">Sort by Frequency</button>
+    </form>
+
+    <form action="/sort_name" method="get" style="display:inline;">
+        <button type="submit">Sort by Name</button>
+    </form>
+
+
+
+    <!-- Table of items -->
+    <table>
+        <tr>
+            <th>Item</th>
+            <th>Frequency</th>
+            <th>Actions</th>
+        </tr>
+        {% for item in items %}
+        <tr>
+            <td>{{ item.name }}</td>
+            <td>{{ item.frequency }}</td>
+            <td>
+                <form action="{{ url_for('increase', item=item.name) }}" method="get" style="display:inline;">
+                    <button type="submit">+</button>
+                </form>
+                <form action="{{ url_for('decrease', item=item.name) }}" method="get" style="display:inline;">
+                    <button type="submit">-</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <script>
+        // Save scroll position to sessionStorage on page unload
+        window.addEventListener("beforeunload", function () {
+            sessionStorage.setItem("scrollPosition", window.scrollY);
+        });
+
+        // Restore scroll position on page load
+        window.addEventListener("load", function () {
+            const scrollPosition = sessionStorage.getItem("scrollPosition");
+            if (scrollPosition !== null) {
+                window.scrollTo(0, parseInt(scrollPosition));
+            }
+        });
+    </script>
+
+</body>
+</html>
